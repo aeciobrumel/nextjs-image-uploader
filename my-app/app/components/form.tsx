@@ -33,21 +33,40 @@ export const Form = () => {
         }
     }, [acceptedFiles, selectedFile]);
 
-    const handleSubmit = async () => {
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    //   Para lidar com múltiplos arquivos, descomente o código abaixo e ajuste o backend para aceitar múltiplos arquivos
+    //
+    // const handleMultipleFiles = async () => {
+    //
+    //     const formData = new FormData();
+    //
+    //     for (let i in acceptedFiles) {
+    //         formData.append(`files[${i}]`, acceptedFiles[i]);
+    //     }
+    //
+    //     const data = await axios.post("https://httpbin.org/post", formData, {
+    //         onUploadProgress: (progressEvent) => {
+    //             if (progressEvent.total) {
+    //                 const pct = (progressEvent.loaded / progressEvent.total) * 100;
+    //                 setUploadProgress(pct);
+    //             }
+    //         }
+    //     });
+    // }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    const handleSubmit = async () => {
         // Para exibir a imagem selecionada antes do upload
         setPhotoString(URL.createObjectURL(acceptedFiles[0]));
-
         if (selectedFile) {
-
             const formData = new FormData();
             formData.append("file", selectedFile);
             formData.append("legend", legendField);
-
             const data = await axios.post("https://httpbin.org/post", formData, {
-                headers: {
-                    "Content-Type": "multipart/form-data"
-                },
+                headers: { "Content-Type": "multipart/form-data" },
                 onUploadProgress: (progressEvent) => {
                     if (progressEvent.total) {
                         const pct = (progressEvent.loaded / progressEvent.total) * 100;
