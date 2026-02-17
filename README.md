@@ -1,56 +1,105 @@
-# nextjs-image-uploader
+# 📸 Next.js Image Uploader
 
-Projeto de upload de imagem com Next.js, com preview local, suporte a drag-and-drop e barra de progresso.
+Uma aplicação moderna de upload de imagens construída com Next.js, React e TypeScript, com interface drag-and-drop intuitiva.
 
-## Status atual
+## ✨ Funcionalidades
 
-- Aplicacao implementada no diretorio `my-app`.
-- Upload configurado para `https://httpbin.org/post` (endpoint de teste).
-- Endpoint local de upload (`app/api/upload/route.ts`) ainda nao esta implementado no repositorio.
+- 🖼️ Upload de imagens com drag-and-drop
+- ⚡ Interface responsiva e moderna com Tailwind CSS
+- 🎯 TypeScript para maior segurança de tipos
+- 📦 Integração com APIs via Axios
+- 🎨 Componentes React otimizados
 
-## Stack
+## 🛠️ Tecnologias Utilizadas
 
-- Next.js `16.1.6`
-- React `19.2.3`
-- TypeScript `5`
-- Tailwind CSS `4`
-- Axios
-- react-dropzone
+- **[Next.js 16.1.6](https://nextjs.org/)** - Framework React para produção
+- **[React 19.2.3](https://react.dev/)** - Biblioteca JavaScript para interfaces
+- **[TypeScript 5](https://www.typescriptlang.org/)** - Superset tipado do JavaScript
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Framework CSS utilitário
+- **[React Dropzone 15](https://react-dropzone.js.org/)** - Componente de drag-and-drop
+- **[Axios 1.13.5](https://axios-http.com/)** - Cliente HTTP para requisições
 
-## Funcionalidades
+## 📋 Pré-requisitos
 
-- Selecionar imagem por input de arquivo.
-- Selecionar imagem por drag-and-drop.
-- Exibir preview da imagem antes do envio.
-- Enviar legenda opcional junto com o arquivo.
-- Exibir progresso de upload em tempo real.
+Certifique-se de ter instalado:
 
-## Estrutura principal
+- Node.js 20 ou superior
+- npm, yarn, pnpm ou bun
 
-```text
-my-app/
-  app/
-    components/
-      form.tsx
-    layout.tsx
-    page.tsx
+## 🚀 Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/aeciobrumel/nextjs-image-uploader.git
+cd nextjs-image-uploader
 ```
 
-## Como executar
+2. Navegue até o diretório da aplicação:
 
 ```bash
 cd my-app
-npm install
-npm run dev
 ```
 
-Abra `http://localhost:3000` no navegador.
+3. Instale as dependências:
 
-## Scripts
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+```
 
-No diretorio `my-app`:
+## 🏃 Como Executar
 
-- `npm run dev`: inicia o servidor de desenvolvimento.
-- `npm run build`: gera o build de producao.
-- `npm run start`: inicia a aplicacao em modo producao.
-- `npm run lint`: executa o lint com ESLint.
+### Modo de Desenvolvimento
+
+```bash
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação.
+
+### Build de Produção
+
+```bash
+npm run build
+npm run start
+# ou
+yarn build
+yarn start
+# ou
+pnpm build
+pnpm start
+```
+
+## 📁 Estrutura do Projeto
+
+```
+nextjs-image-uploader/
+├── my-app/                 # Aplicação principal
+│   ├── app/               # Diretório de rotas (App Router)
+│   ├── public/            # Arquivos estáticos
+│   ├── package.json       # Dependências do projeto
+│   ├── tsconfig.json      # Configuração do TypeScript
+│   ├── next.config.ts     # Configuração do Next.js
+│   └── tailwind.config.*  # Configuração do Tailwind CSS
+├── LICENSE                # Licença MIT
+└── README.md             # Documentação do projeto
+```
+
+## 🧪 Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Gera build de produção
+- `npm run start` - Inicia o servidor de produção
+- `npm run lint` - Executa o ESLint para verificar problemas no código
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
